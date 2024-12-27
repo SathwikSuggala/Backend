@@ -1,5 +1,5 @@
-# Backend for E-Commerce Application
-This project is a backend implementation for an e-commerce application. It provides APIs for user management, product management, order handling, and authentication using Spring Boot and MongoDB.
+# Backend for Inventory Management Application
+This project is a backend implementation for an Inventory application. It provides APIs for user management, product management, order handling, and authentication using Spring Boot and MySQL.As of now in this we have only one role which is CUSTOMER. can be scalable to add more roles easily.
 ## Features
 - User registration and authentication (JWT and cookies).
 - CRUD operations for products.
@@ -11,8 +11,9 @@ This project is a backend implementation for an e-commerce application. It provi
 - Java 21
 - Spring Boot
 - MySql
+- JPA ORM
 - Spring Security (JWT Authentication)
-- Lombok
+- Lombok(Setters, Getters, Constructors)
 - Maven
 ## How to Run
 
