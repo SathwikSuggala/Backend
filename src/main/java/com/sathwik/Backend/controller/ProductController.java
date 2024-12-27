@@ -37,6 +37,9 @@ public class ProductController {
     public ResponseEntity<?> updateProduct(@PathVariable Long id, @RequestBody Product product) {
         try {
             return ResponseEntity.ok(productService.updateProduct(id, product));
+        }catch (IllegalArgumentException ie){
+            return ResponseEntity.status(HttpStatus.CONFLICT)
+                    .body(new ErrorResponse(ie.getMessage(), "Invalid data provided for the product"));
         }catch (RuntimeException re){
             return ResponseEntity.status(HttpStatus.NOT_FOUND)
                     .body(new ErrorResponse(re.getMessage(), "No product found with the provided ID"));

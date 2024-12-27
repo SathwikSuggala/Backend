@@ -20,7 +20,14 @@ public class ProductService {
     }
 
     public Product updateProduct(Long id, Product updatedProduct) {
+
         Product existingProduct = productRepository.findById(id).orElseThrow(() -> new RuntimeException("Product not found"));
+
+        if(!existingProduct.getSku().equals(updatedProduct.getSku())){
+            if(productRepository.findBySku(updatedProduct.getSku()).isPresent()){
+                throw new IllegalArgumentException("Product already exists with given sku");
+            }
+        }
         existingProduct.setName(updatedProduct.getName());
         existingProduct.setSku(updatedProduct.getSku());
         existingProduct.setPrice(updatedProduct.getPrice());
@@ -53,6 +60,9 @@ public class ProductService {
         }
         if (product.getQuantity() == null || product.getQuantity() < 0) {
             throw new IllegalArgumentException("Quantity cannot be negative");
+        }
+        if(productRepository.findBySku(product.getSku()).isPresent()){
+            throw new IllegalArgumentException(("Product already exists"));
         }
     }
 }
