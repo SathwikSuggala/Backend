@@ -37,6 +37,7 @@ This project is a backend implementation for an Inventory application. It provid
    for windows
    ```bash
    net start mysql
+8. For MySql set up, first you need MySql server installed in you system and create a DataBase called "Inventory". after that simply run this application and you schema will be created automatically with the help of Hibernate.
 ---
 
 ### **API Endpoints**
