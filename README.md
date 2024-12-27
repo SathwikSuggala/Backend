@@ -28,10 +28,11 @@ This project is a backend implementation for an e-commerce application. It provi
 4. Run the application
     ```bash
    mvn spring-boot:run
-5. Access the APIs at:
+5. if the commands are not working then please clone the repository and run using any java compiler. And you should have JDK 21
+6. Access the APIs at:
    Base URL: http://localhost:8080/api/
 
-6. Run you mysql server in port number 3306.
+7. Run your mysql server in port number 3306. and change the username and password of you database in application.properties file.  
    for windows
    ```bash
    net start mysql
