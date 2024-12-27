@@ -38,7 +38,7 @@ This project is a backend implementation for an e-commerce application. It provi
 ---
 
 ### **API Endpoints**
-Documentation for the apis:https://app.getpostman.com/join-team?invite_code=41726ea682ba67721e02a0e8148a5f68583abb20201bd5cdfabd05ac50c6c4b5&target_code=7e0fe76aae898cf6265bfe9ceaa385ad
+Documentation for the apis:https://www.postman.com/spring-boot-6046/backend/documentation/q3wtbu2/backend
 this is a post man api documentation, in this you will see a collection named Backend, select that collection and you will be abel to see the complete documentation.
 
 ## Error Handling
